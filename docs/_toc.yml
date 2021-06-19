@@ -10,3 +10,6 @@ parts:
   - file: sets-maps/index
     sections:
     - file: sets-maps/sets
+- caption: 外部资源
+  chapters:
+  - file: reference/index
