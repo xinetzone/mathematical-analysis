@@ -1,0 +1,81 @@
+Traceback (most recent call last):
+  File "/home/runner/.local/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/runner/.local/lib/python3.8/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/runner/.local/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/runner/.local/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/runner/.local/lib/python3.8/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/.local/lib/python3.8/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/runner/.local/lib/python3.8/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+x, y, z = symbols('x y z')
+
+z = x + y*x
+
+display_dot(z)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m~/.local/lib/python3.8/site-packages/pydot.py[0m in [0;36mcreate[0;34m(self, prog, format, encoding)[0m
+[1;32m   1922[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1923[0;31m             stdout_data, stderr_data, process = call_graphviz(
+[0m[1;32m   1924[0m                 [0mprogram[0m[0;34m=[0m[0mprog[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.local/lib/python3.8/site-packages/pydot.py[0m in [0;36mcall_graphviz[0;34m(program, arguments, working_dir, **kwargs)[0m
+[1;32m    131[0m [0;34m[0m[0m
+[0;32m--> 132[0;31m     process = subprocess.Popen(
+[0m[1;32m    133[0m         [0mprogram_with_args[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.8/subprocess.py[0m in [0;36m__init__[0;34m(self, args, bufsize, executable, stdin, stdout, stderr, preexec_fn, close_fds, shell, cwd, env, universal_newlines, startupinfo, creationflags, restore_signals, start_new_session, pass_fds, encoding, errors, text)[0m
+[1;32m    853[0m [0;34m[0m[0m
+[0;32m--> 854[0;31m             self._execute_child(args, executable, preexec_fn, close_fds,
+[0m[1;32m    855[0m                                 [0mpass_fds[0m[0;34m,[0m [0mcwd[0m[0;34m,[0m [0menv[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.8/subprocess.py[0m in [0;36m_execute_child[0;34m(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, start_new_session)[0m
+[1;32m   1701[0m                         [0merr_msg[0m [0;34m=[0m [0mos[0m[0;34m.[0m[0mstrerror[0m[0;34m([0m[0merrno_num[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1702[0;31m                     [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merrno_num[0m[0;34m,[0m [0merr_msg[0m[0;34m,[0m [0merr_filename[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1703[0m                 [0;32mraise[0m [0mchild_exception_type[0m[0;34m([0m[0merr_msg[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'dot'
+
+During handling of the above exception, another exception occurred:
+
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m<ipython-input-2-10b3ccf3f8bb>[0m in [0;36m<module>[0;34m[0m
+[1;32m      3[0m [0mz[0m [0;34m=[0m [0mx[0m [0;34m+[0m [0my[0m[0;34m*[0m[0mx[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0;34m[0m[0m
+[0;32m----> 5[0;31m [0mdisplay_dot[0m[0;34m([0m[0mz[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m<ipython-input-1-f65d1d391b75>[0m in [0;36mdisplay_dot[0;34m(expr)[0m
+[1;32m     10[0m     [0mg[0m [0;34m=[0m [0mpydot[0m[0;34m.[0m[0mgraph_from_dot_data[0m[0;34m([0m[0mdotprint[0m[0;34m([0m[0mexpr[0m[0;34m)[0m[0;34m)[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     11[0m     [0mg[0m[0;34m.[0m[0mset_bgcolor[0m[0;34m([0m[0;34m'lightyellow'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 12[0;31m     [0mt[0m [0;34m=[0m [0mSVG[0m[0;34m([0m[0mg[0m[0;34m.[0m[0mcreate_svg[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     13[0m     [0;32mreturn[0m [0mt[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.local/lib/python3.8/site-packages/pydot.py[0m in [0;36mnew_method[0;34m(f, prog, encoding)[0m
+[1;32m   1731[0m                     encoding=None):
+[1;32m   1732[0m                 [0;34m"""Refer to docstring of method `create`."""[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1733[0;31m                 return self.create(
+[0m[1;32m   1734[0m                     format=f, prog=prog, encoding=encoding)
+[1;32m   1735[0m             [0mname[0m [0;34m=[0m [0;34m'create_{fmt}'[0m[0;34m.[0m[0mformat[0m[0;34m([0m[0mfmt[0m[0;34m=[0m[0mfrmt[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.local/lib/python3.8/site-packages/pydot.py[0m in [0;36mcreate[0;34m(self, prog, format, encoding)[0m
+[1;32m   1931[0m                 args[1] = '"{prog}" not found in path.'.format(
+[1;32m   1932[0m                     prog=prog)
+[0;32m-> 1933[0;31m                 [0;32mraise[0m [0mOSError[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1934[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1935[0m                 [0;32mraise[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] "dot" not found in path.
+FileNotFoundError: [Errno 2] "dot" not found in path.
+

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>笔记本 &#8212; 数学人生</title>
+    <title>Python 与 数学 &#8212; 数学人生</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -65,7 +65,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/mathematical-analysis");
+    script.setAttribute("repo", "xinetzone/mathematics");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -91,7 +91,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="前言" href="preface.html" />
+    <link rel="next" title="1. 前言" href="preface.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -127,14 +127,9 @@ commentsRunWhenDOMLoaded(addUtterances);
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="preface.html">
-   前言
-  </a>
- </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="sets-maps/index.html">
-   集合与映射
+  <a class="reference internal" href="preface.html">
+   1. 前言
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -142,9 +137,73 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="sympy/index.html">
+     1.1. SymPy
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sympy/a0-intro.html">
+       1.1.1. 简介
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sympy/a1-basic-operations.html">
+       1.1.2. 基本运算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sympy/a2-simplification.html">
+       1.1.3. 化简
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sympy/a3-calculus.html">
+       1.1.4. 计算
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sympy/a4-solvers.html">
+       1.1.5. 求解
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sympy/a5-matrices.html">
+       1.1.6. 矩阵
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sympy/a6-manipulation.html">
+       1.1.7. Advanced Expression Manipulation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="sets-logic/index.html">
+   2. 逻辑与集合
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="sets-maps/sets.html">
-     集合
+    <a class="reference internal" href="sets-logic/logic.html">
+     2.1. 逻辑
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sets-logic/sets.html">
+     2.2. 集合
     </a>
    </li>
   </ul>
@@ -159,6 +218,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1">
   <a class="reference internal" href="reference/index.html">
    参考
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/glossary.html">
+   术语库
   </a>
  </li>
 </ul>
@@ -188,7 +252,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
       <i class="fab fa-linkedin"></i>
   </a>
-  <div><a href="https://github.com/xinetzone/mathematical-analysis">Mathematical Analysis</a> 版权所有</div>
+  <div><a href="https://github.com/xinetzone/mathematics">Python Mathematics</a> 版权所有</div>
 </div> 
 
 </div>
@@ -241,11 +305,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/mathematical-analysis"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/xinetzone/mathematics"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/mathematics/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -274,24 +338,37 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="id1">
-<h1>笔记本<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="python">
+<h1>Python 与 数学<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h1>
 <div class="w3-pale-green w3-card w3-padding w3-round-xlarge w3-margin-top docutils">
-<p>Python 与 数学分析</p>
+<p>利用 Python 学习数学。</p>
 </div>
 <div class="tip dropdown w3-pale-blue w3-card-4 w3-padding w3-round-xlarge w3-margin-top admonition">
 <p class="admonition-title">本站目录</p>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">教程</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="preface.html">前言</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sets-maps/index.html">集合与映射</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">1. 前言</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sympy/index.html">1.1. SymPy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sympy/a0-intro.html">1.1.1. 简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sympy/a1-basic-operations.html">1.1.2. 基本运算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sympy/a2-simplification.html">1.1.3. 化简</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sympy/a3-calculus.html">1.1.4. 计算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sympy/a4-solvers.html">1.1.5. 求解</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sympy/a5-matrices.html">1.1.6. 矩阵</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sympy/a6-manipulation.html">1.1.7. Advanced Expression Manipulation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sets-logic/index.html">2. 逻辑与集合</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">外部资源</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/glossary.html">术语库</a></li>
 </ul>
 </div>
 </div>
@@ -322,7 +399,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="preface.html" title="next page">前言</a>
+    <a class='right-next' id="next-link" href="preface.html" title="next page"><span class="section-number">1. </span>前言</a>
 
         </div>
         
