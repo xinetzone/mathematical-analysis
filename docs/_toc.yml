@@ -3,13 +3,22 @@
 
 format: jb-book  # Tells Jupyter Book what kind of structure to expect
 root: index # A path to the *root page* (landing page) of your book
+  
 parts:
 - caption: 教程
+  numbered: true
   chapters:
   - file: preface
-  - file: sets-maps/index
     sections:
-    - file: sets-maps/sets
+    - file: sympy/index
+      sections:
+      - glob: sympy/**
+  - file: sets-logic/index
+    sections:
+    - file: sets-logic/logic
+    - file: sets-logic/sets
+
 - caption: 外部资源
   chapters:
   - file: reference/index
+  - file: reference/glossary
