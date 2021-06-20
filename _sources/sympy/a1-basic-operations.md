@@ -17,8 +17,11 @@ kernelspec:
 定义一些基本数学变量：
 
 ```{code-cell} ipython3
+import warnings
 from sympy import *
-init_printing()
+
+warnings.filterwarnings('ignore')
+# init_printing()
 
 x, y, z = symbols('x y z')
 ```

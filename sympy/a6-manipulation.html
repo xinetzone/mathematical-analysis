@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.1.7. Advanced Expression Manipulation &#8212; 数学人生</title>
+    <title>1.1.7. 高级表达式操作 &#8212; 数学人生</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -88,10 +88,12 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="2. 逻辑与集合" href="../sets-logic/index.html" />
+    <link rel="next" title="1.1.8. 常见问题" href="a7-faqs.html" />
     <link rel="prev" title="1.1.6. 矩阵" href="a5-matrices.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -180,7 +182,12 @@ commentsRunWhenDOMLoaded(addUtterances);
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       1.1.7. Advanced Expression Manipulation
+       1.1.7. 高级表达式操作
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="a7-faqs.html">
+       1.1.8. 常见问题
       </a>
      </li>
     </ul>
@@ -351,6 +358,19 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   1.1.7.1. 理解表达式树
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -359,9 +379,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="advanced-expression-manipulation">
-<h1><span class="section-number">1.1.7. </span>Advanced Expression Manipulation<a class="headerlink" href="#advanced-expression-manipulation" title="永久链接至标题">¶</a></h1>
-<p><a class="reference external" href="https://docs.sympy.org/latest/tutorial/manipulation.html">Advanced Expression Manipulation — SymPy 1.8 documentation</a></p>
+  <div class="section" id="id1">
+<h1><span class="section-number">1.1.7. </span>高级表达式操作<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>参考 <a class="reference external" href="https://docs.sympy.org/latest/tutorial/manipulation.html">Advanced Expression Manipulation</a></p>
+<p>在本节中，我们将讨论一些可以对表达式执行高级操作的方法。</p>
+<div class="section" id="id2">
+<h2><span class="section-number">1.1.7.1. </span>理解表达式树<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在我们这样做之前，我们需要了解表达式在 SymPy 中是如何表示的。数学表达式表示为一棵树。让我们采用表达式 <span class="math notranslate nohighlight">\(x^2+xy\)</span>，即 <code class="docutils literal notranslate"><span class="pre">x**2</span> <span class="pre">+</span> <span class="pre">x*y</span></code>。我们可以通过使用 <code class="docutils literal notranslate"><span class="pre">srepr</span></code> 在内部看到这个表达式的样子</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
@@ -370,7 +394,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">SVG</span>
 
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
-<span class="n">init_printing</span><span class="p">(</span><span class="s1">&#39;dot&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">display_dot</span><span class="p">(</span><span class="n">expr</span><span class="p">):</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">pydot</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dotprint</span><span class="p">(</span><span class="n">expr</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
@@ -385,32 +408,115 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y z&#39;</span><span class="p">)</span>
 
-<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">x</span>
-
-<span class="n">display_dot</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+<span class="n">srepr</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a6-manipulation_2_0.svg" src="../_images/a6-manipulation_2_0.svg" /></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">pydot</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dotprint</span><span class="p">(</span><span class="n">z</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Add(Pow(Symbol(&#39;x&#39;), Integer(2)), Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))&quot;
 </pre></div>
 </div>
 </div>
 </div>
+<p>拆解这个最简单的方法是查看表达式树的图表：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_dot</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pydot.Dot at 0x7f46c0597490&gt;
+<img alt="../_images/a6-manipulation_4_0.svg" src="../_images/a6-manipulation_4_0.svg" /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>上图是使用 <a class="reference external" href="http://www.graphviz.org/">Graphviz</a> 和 <a class="reference external" href="https://docs.sympy.org/latest/modules/printing.html#sympy.printing.dot.dotprint"><code class="docutils literal notranslate"><span class="pre">dotprint</span></code></a> 函数制作的。</p>
+</div>
+<p>首先，让我们看看这棵树的叶子。符号是类 <code class="docutils literal notranslate"><span class="pre">Symbol</span></code> 的实例。虽然我们一直在做</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+<p>我们也可以做到</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>无论哪种方式，我们都会得到一个名为“x”的 Symbol。对于表达式中的数字 2，我们得到了 <code class="docutils literal notranslate"><span class="pre">Integer(2)</span></code>。<code class="docutils literal notranslate"><span class="pre">Integer</span></code> 是整数的 SymPy 类。它类似于 Python 的内置类型 <code class="docutils literal notranslate"><span class="pre">int</span></code>，不同之处在于 <code class="docutils literal notranslate"><span class="pre">Integer</span></code> 可以很好地与其他 SymPy 类型一起使用。</p>
+<p>当我们写 <code class="docutils literal notranslate"><span class="pre">x**2</span></code> 时，这会创建一个 <code class="docutils literal notranslate"><span class="pre">Pow</span></code> 对象。<code class="docutils literal notranslate"><span class="pre">Pow</span></code> 是“power”的缩写。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">srepr</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Pow(Symbol(&#39;x&#39;), Integer(2))&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_dot</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a6-manipulation_12_0.svg" src="../_images/a6-manipulation_12_0.svg" /></div>
+</div>
+<p>我们可以通过调用 <code class="docutils literal notranslate"><span class="pre">Pow(x,</span> <span class="pre">2)</span></code> 创建相同的对象</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2}\]</div>
+</div>
+</div>
+<p>其他的运算以此类推：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="o">/</span><span class="n">y</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - x^{2} + \frac{\sin{\left(x y \right)}}{2} + \frac{1}{y}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">srepr</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Add(Mul(Integer(-1), Pow(Symbol(&#39;x&#39;), Integer(2))), Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))), Pow(Symbol(&#39;y&#39;), Integer(-1)))&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display_dot</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a6-manipulation_18_0.svg" src="../_images/a6-manipulation_18_0.svg" /></div>
 </div>
 </div>
 </div>
@@ -441,7 +547,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="a5-matrices.html" title="previous page"><span class="section-number">1.1.6. </span>矩阵</a>
-    <a class='right-next' id="next-link" href="../sets-logic/index.html" title="next page"><span class="section-number">2. </span>逻辑与集合</a>
+    <a class='right-next' id="next-link" href="a7-faqs.html" title="next page"><span class="section-number">1.1.8. </span>常见问题</a>
 
         </div>
         

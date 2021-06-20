@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="461pt" height="332pt" viewBox="0.00 0.00 461.00 332.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 328)">
+<title>G</title>
+<polygon fill="lightyellow" stroke="transparent" points="-4,4 -4,-328 457,-328 457,4 -4,4"/>
+<!-- Add(Pow(Symbol(&#39;y&#39;), Integer(&#45;1)), Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))), Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2))))_() -->
+<g id="node1" class="node">
+<title>Add(Pow(Symbol('y'), Integer(-1)), Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y')))), Mul(Integer(-1), Pow(Symbol('x'), Integer(2))))_()</title>
+<ellipse fill="none" stroke="black" cx="208" cy="-306" rx="28.7" ry="18"/>
+<text text-anchor="middle" x="208" y="-302.3" font-family="Times,serif" font-size="14.00">Add</text>
+</g>
+<!-- Pow(Symbol(&#39;y&#39;), Integer(&#45;1))_(0,) -->
+<g id="node2" class="node">
+<title>Pow(Symbol('y'), Integer(-1))_(0,)</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-234" rx="29.8" ry="18"/>
+<text text-anchor="middle" x="99" y="-230.3" font-family="Times,serif" font-size="14.00">Pow</text>
+</g>
+<!-- Add(Pow(Symbol(&#39;y&#39;), Integer(&#45;1)), Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))), Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2))))_()&#45;&gt;Pow(Symbol(&#39;y&#39;), Integer(&#45;1))_(0,) -->
+<g id="edge1" class="edge">
+<title>Add(Pow(Symbol('y'), Integer(-1)), Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y')))), Mul(Integer(-1), Pow(Symbol('x'), Integer(2))))_()-&gt;Pow(Symbol('y'), Integer(-1))_(0,)</title>
+<path fill="none" stroke="black" d="M188.76,-292.65C171.7,-281.69 146.55,-265.54 127.21,-253.11"/>
+<polygon fill="black" stroke="black" points="129.09,-250.16 118.78,-247.7 125.3,-256.05 129.09,-250.16"/>
+</g>
+<!-- Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))))_(1,) -->
+<g id="node5" class="node">
+<title>Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y'))))_(1,)</title>
+<ellipse fill="none" stroke="black" cx="208" cy="-234" rx="28.7" ry="18"/>
+<text text-anchor="middle" x="208" y="-230.3" font-family="Times,serif" font-size="14.00">Mul</text>
+</g>
+<!-- Add(Pow(Symbol(&#39;y&#39;), Integer(&#45;1)), Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))), Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2))))_()&#45;&gt;Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))))_(1,) -->
+<g id="edge2" class="edge">
+<title>Add(Pow(Symbol('y'), Integer(-1)), Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y')))), Mul(Integer(-1), Pow(Symbol('x'), Integer(2))))_()-&gt;Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y'))))_(1,)</title>
+<path fill="none" stroke="black" d="M208,-287.7C208,-279.98 208,-270.71 208,-262.11"/>
+<polygon fill="black" stroke="black" points="211.5,-262.1 208,-252.1 204.5,-262.1 211.5,-262.1"/>
+</g>
+<!-- Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2)))_(2,) -->
+<g id="node11" class="node">
+<title>Mul(Integer(-1), Pow(Symbol('x'), Integer(2)))_(2,)</title>
+<ellipse fill="none" stroke="black" cx="315" cy="-234" rx="28.7" ry="18"/>
+<text text-anchor="middle" x="315" y="-230.3" font-family="Times,serif" font-size="14.00">Mul</text>
+</g>
+<!-- Add(Pow(Symbol(&#39;y&#39;), Integer(&#45;1)), Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))), Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2))))_()&#45;&gt;Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2)))_(2,) -->
+<g id="edge3" class="edge">
+<title>Add(Pow(Symbol('y'), Integer(-1)), Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y')))), Mul(Integer(-1), Pow(Symbol('x'), Integer(2))))_()-&gt;Mul(Integer(-1), Pow(Symbol('x'), Integer(2)))_(2,)</title>
+<path fill="none" stroke="black" d="M227.13,-292.49C243.84,-281.55 268.31,-265.55 287.18,-253.2"/>
+<polygon fill="black" stroke="black" points="289.22,-256.05 295.68,-247.64 285.39,-250.19 289.22,-256.05"/>
+</g>
+<!-- Symbol(&#39;y&#39;)_(0, 0) -->
+<g id="node3" class="node">
+<title>Symbol('y')_(0, 0)</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="27" y="-158.3" font-family="Times,serif" font-size="14.00">y</text>
+</g>
+<!-- Pow(Symbol(&#39;y&#39;), Integer(&#45;1))_(0,)&#45;&gt;Symbol(&#39;y&#39;)_(0, 0) -->
+<g id="edge4" class="edge">
+<title>Pow(Symbol('y'), Integer(-1))_(0,)-&gt;Symbol('y')_(0, 0)</title>
+<path fill="none" stroke="black" d="M83.73,-218.15C73.67,-208.37 60.33,-195.4 49.11,-184.5"/>
+<polygon fill="black" stroke="black" points="51.36,-181.81 41.75,-177.35 46.49,-186.83 51.36,-181.81"/>
+</g>
+<!-- Integer(&#45;1)_(0, 1) -->
+<g id="node4" class="node">
+<title>Integer(-1)_(0, 1)</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="99" y="-158.3" font-family="Times,serif" font-size="14.00">-1</text>
+</g>
+<!-- Pow(Symbol(&#39;y&#39;), Integer(&#45;1))_(0,)&#45;&gt;Integer(&#45;1)_(0, 1) -->
+<g id="edge5" class="edge">
+<title>Pow(Symbol('y'), Integer(-1))_(0,)-&gt;Integer(-1)_(0, 1)</title>
+<path fill="none" stroke="black" d="M99,-215.7C99,-207.98 99,-198.71 99,-190.11"/>
+<polygon fill="black" stroke="black" points="102.5,-190.1 99,-180.1 95.5,-190.1 102.5,-190.1"/>
+</g>
+<!-- Rational(1, 2)_(1, 0) -->
+<g id="node6" class="node">
+<title>Rational(1, 2)_(1, 0)</title>
+<ellipse fill="none" stroke="black" cx="171" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="171" y="-158.3" font-family="Times,serif" font-size="14.00">1/2</text>
+</g>
+<!-- Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))))_(1,)&#45;&gt;Rational(1, 2)_(1, 0) -->
+<g id="edge6" class="edge">
+<title>Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y'))))_(1,)-&gt;Rational(1, 2)_(1, 0)</title>
+<path fill="none" stroke="black" d="M199.42,-216.76C194.94,-208.28 189.35,-197.71 184.32,-188.2"/>
+<polygon fill="black" stroke="black" points="187.3,-186.35 179.54,-179.15 181.11,-189.62 187.3,-186.35"/>
+</g>
+<!-- sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))_(1, 1) -->
+<g id="node7" class="node">
+<title>sin(Mul(Symbol('x'), Symbol('y')))_(1, 1)</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="243" y="-158.3" font-family="Times,serif" font-size="14.00">sin</text>
+</g>
+<!-- Mul(Rational(1, 2), sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))))_(1,)&#45;&gt;sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))_(1, 1) -->
+<g id="edge7" class="edge">
+<title>Mul(Rational(1, 2), sin(Mul(Symbol('x'), Symbol('y'))))_(1,)-&gt;sin(Mul(Symbol('x'), Symbol('y')))_(1, 1)</title>
+<path fill="none" stroke="black" d="M216.29,-216.41C220.44,-208.13 225.54,-197.92 230.17,-188.66"/>
+<polygon fill="black" stroke="black" points="233.42,-189.98 234.77,-179.47 227.16,-186.85 233.42,-189.98"/>
+</g>
+<!-- Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))_(1, 1, 0) -->
+<g id="node8" class="node">
+<title>Mul(Symbol('x'), Symbol('y'))_(1, 1, 0)</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-90" rx="28.7" ry="18"/>
+<text text-anchor="middle" x="243" y="-86.3" font-family="Times,serif" font-size="14.00">Mul</text>
+</g>
+<!-- sin(Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;)))_(1, 1)&#45;&gt;Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))_(1, 1, 0) -->
+<g id="edge8" class="edge">
+<title>sin(Mul(Symbol('x'), Symbol('y')))_(1, 1)-&gt;Mul(Symbol('x'), Symbol('y'))_(1, 1, 0)</title>
+<path fill="none" stroke="black" d="M243,-143.7C243,-135.98 243,-126.71 243,-118.11"/>
+<polygon fill="black" stroke="black" points="246.5,-118.1 243,-108.1 239.5,-118.1 246.5,-118.1"/>
+</g>
+<!-- Symbol(&#39;x&#39;)_(1, 1, 0, 0) -->
+<g id="node9" class="node">
+<title>Symbol('x')_(1, 1, 0, 0)</title>
+<ellipse fill="none" stroke="black" cx="207" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="207" y="-14.3" font-family="Times,serif" font-size="14.00">x</text>
+</g>
+<!-- Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))_(1, 1, 0)&#45;&gt;Symbol(&#39;x&#39;)_(1, 1, 0, 0) -->
+<g id="edge9" class="edge">
+<title>Mul(Symbol('x'), Symbol('y'))_(1, 1, 0)-&gt;Symbol('x')_(1, 1, 0, 0)</title>
+<path fill="none" stroke="black" d="M234.65,-72.76C230.29,-64.28 224.85,-53.71 219.96,-44.2"/>
+<polygon fill="black" stroke="black" points="222.99,-42.44 215.3,-35.15 216.77,-45.64 222.99,-42.44"/>
+</g>
+<!-- Symbol(&#39;y&#39;)_(1, 1, 0, 1) -->
+<g id="node10" class="node">
+<title>Symbol('y')_(1, 1, 0, 1)</title>
+<ellipse fill="none" stroke="black" cx="279" cy="-18" rx="27" ry="18"/>
+<text text-anchor="middle" x="279" y="-14.3" font-family="Times,serif" font-size="14.00">y</text>
+</g>
+<!-- Mul(Symbol(&#39;x&#39;), Symbol(&#39;y&#39;))_(1, 1, 0)&#45;&gt;Symbol(&#39;y&#39;)_(1, 1, 0, 1) -->
+<g id="edge10" class="edge">
+<title>Mul(Symbol('x'), Symbol('y'))_(1, 1, 0)-&gt;Symbol('y')_(1, 1, 0, 1)</title>
+<path fill="none" stroke="black" d="M251.35,-72.76C255.71,-64.28 261.15,-53.71 266.04,-44.2"/>
+<polygon fill="black" stroke="black" points="269.23,-45.64 270.7,-35.15 263.01,-42.44 269.23,-45.64"/>
+</g>
+<!-- Integer(&#45;1)_(2, 0) -->
+<g id="node12" class="node">
+<title>Integer(-1)_(2, 0)</title>
+<ellipse fill="none" stroke="black" cx="315" cy="-162" rx="27" ry="18"/>
+<text text-anchor="middle" x="315" y="-158.3" font-family="Times,serif" font-size="14.00">-1</text>
+</g>
+<!-- Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2)))_(2,)&#45;&gt;Integer(&#45;1)_(2, 0) -->
+<g id="edge11" class="edge">
+<title>Mul(Integer(-1), Pow(Symbol('x'), Integer(2)))_(2,)-&gt;Integer(-1)_(2, 0)</title>
+<path fill="none" stroke="black" d="M315,-215.7C315,-207.98 315,-198.71 315,-190.11"/>
+<polygon fill="black" stroke="black" points="318.5,-190.1 315,-180.1 311.5,-190.1 318.5,-190.1"/>
+</g>
+<!-- Pow(Symbol(&#39;x&#39;), Integer(2))_(2, 1) -->
+<g id="node13" class="node">
+<title>Pow(Symbol('x'), Integer(2))_(2, 1)</title>
+<ellipse fill="none" stroke="black" cx="390" cy="-162" rx="29.8" ry="18"/>
+<text text-anchor="middle" x="390" y="-158.3" font-family="Times,serif" font-size="14.00">Pow</text>
+</g>
+<!-- Mul(Integer(&#45;1), Pow(Symbol(&#39;x&#39;), Integer(2)))_(2,)&#45;&gt;Pow(Symbol(&#39;x&#39;), Integer(2))_(2, 1) -->
+<g id="edge12" class="edge">
+<title>Mul(Integer(-1), Pow(Symbol('x'), Integer(2)))_(2,)-&gt;Pow(Symbol('x'), Integer(2))_(2, 1)</title>
+<path fill="none" stroke="black" d="M330.54,-218.5C341.1,-208.64 355.24,-195.44 367.09,-184.38"/>
+<polygon fill="black" stroke="black" points="369.56,-186.87 374.48,-177.49 364.78,-181.75 369.56,-186.87"/>
+</g>
+<!-- Symbol(&#39;x&#39;)_(2, 1, 0) -->
+<g id="node14" class="node">
+<title>Symbol('x')_(2, 1, 0)</title>
+<ellipse fill="none" stroke="black" cx="354" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="354" y="-86.3" font-family="Times,serif" font-size="14.00">x</text>
+</g>
+<!-- Pow(Symbol(&#39;x&#39;), Integer(2))_(2, 1)&#45;&gt;Symbol(&#39;x&#39;)_(2, 1, 0) -->
+<g id="edge13" class="edge">
+<title>Pow(Symbol('x'), Integer(2))_(2, 1)-&gt;Symbol('x')_(2, 1, 0)</title>
+<path fill="none" stroke="black" d="M381.47,-144.41C377.16,-136.04 371.85,-125.71 367.05,-116.37"/>
+<polygon fill="black" stroke="black" points="370.16,-114.76 362.47,-107.47 363.93,-117.96 370.16,-114.76"/>
+</g>
+<!-- Integer(2)_(2, 1, 1) -->
+<g id="node15" class="node">
+<title>Integer(2)_(2, 1, 1)</title>
+<ellipse fill="none" stroke="black" cx="426" cy="-90" rx="27" ry="18"/>
+<text text-anchor="middle" x="426" y="-86.3" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- Pow(Symbol(&#39;x&#39;), Integer(2))_(2, 1)&#45;&gt;Integer(2)_(2, 1, 1) -->
+<g id="edge14" class="edge">
+<title>Pow(Symbol('x'), Integer(2))_(2, 1)-&gt;Integer(2)_(2, 1, 1)</title>
+<path fill="none" stroke="black" d="M398.53,-144.41C402.84,-136.04 408.15,-125.71 412.95,-116.37"/>
+<polygon fill="black" stroke="black" points="416.07,-117.96 417.53,-107.47 409.84,-114.76 416.07,-117.96"/>
+</g>
+</g>
+</svg>
