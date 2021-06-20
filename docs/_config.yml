@@ -22,7 +22,7 @@ only_build_toc_files: false
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force # 是否在构建时执行笔记本。必须是 (auto", "force", "cache", "off") 之一
+  execute_notebooks: cache # 是否在构建时执行笔记本。必须是 (auto", "force", "cache", "off") 之一
   cache: "" # jupyter 的缓存路径，该路径将用于存储执行工件。 `_build/.jupyter_cache/`
   exclude_patterns: [] # 在执行中要“跳过”的模式列表（例如，需要很长时间的笔记本）
   timeout: 30 # 每个笔记本单元允许运行的最长时间（以秒为单位）。

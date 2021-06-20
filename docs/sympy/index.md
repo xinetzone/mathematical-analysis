@@ -10,7 +10,7 @@
 ```python
 import mpmath
 from sympy import *
-init_printing()
+init_printing(use_latex='mathjax')
 ```
 
 本节目录：
