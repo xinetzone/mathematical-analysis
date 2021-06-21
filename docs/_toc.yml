@@ -14,9 +14,12 @@ parts:
     - file: sets-logic/logic
     - file: sets-logic/sets
 
-- caption: 资源
+- caption: 帮助
   chapters:
   - file: reference/index
   - file: reference/glossary
+  - file: notation/index
+    sections:
+    - file: notation/space
   - url: https://xinetzone.github.io/sympy-book/
     title: SymPy 教程
