@@ -1,4 +1,4 @@
-(math:notation:space)=
+(math:notation/space)=
 # 空间
 
 ## 数字
