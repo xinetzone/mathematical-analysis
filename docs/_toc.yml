@@ -6,13 +6,10 @@ root: index # A path to the *root page* (landing page) of your book
   
 parts:
 - caption: 教程
-  numbered: true
+  numbered: 3
   chapters:
+  
   - file: preface
-    sections:
-    - file: sympy/index
-      sections:
-      - glob: sympy/**
   - file: sets-logic/index
     sections:
     - file: sets-logic/logic
@@ -22,3 +19,5 @@ parts:
   chapters:
   - file: reference/index
   - file: reference/glossary
+  - url: https://xinetzone.github.io/sympy-book/
+    title: SymPy 教程
