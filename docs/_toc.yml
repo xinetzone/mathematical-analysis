@@ -8,14 +8,13 @@ parts:
 - caption: 教程
   numbered: 3
   chapters:
-  
   - file: preface
   - file: sets-logic/index
     sections:
     - file: sets-logic/logic
     - file: sets-logic/sets
 
-- caption: 外部资源
+- caption: 资源
   chapters:
   - file: reference/index
   - file: reference/glossary
